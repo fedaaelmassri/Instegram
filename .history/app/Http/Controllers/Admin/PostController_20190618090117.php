@@ -1,0 +1,34 @@
+<?php
+
+namespace App\Http\Controllers\Admin;
+
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+
+class PostController extends Controller
+{
+    //
+    public function index(){
+return  view('admin.posts.index',[
+      'posts'=>Post::all(),
+]);
+    }
+    public function create(){
+        return  view('admin.posts.create');
+    }
+    public function store(){
+        return __METHOD__;
+  
+    }
+    public function edit($id){
+        $post=
+        return  view('admin.posts.edit',[
+            'posts'=>Post::findorFail($id),
+        ]);   
+    }
+    public function delete(){
+        return __METHOD__;
+  
+    }
+    
+}
