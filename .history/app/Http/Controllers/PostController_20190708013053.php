@@ -50,23 +50,28 @@ class PostController extends Controller
                 // }
                   public function  post_category($id)
                   {
-
-                 //5cat'=>$cat,
-                 $cat = Category::with(['posts'])->find($id);
-            
-                    if (!$cat) {
+                      
+                      $post = Post::published()->find($id);
+              
+                    if (!$post) {
                       abort(404);
                     }
                       
+                      $stat = Post::updateOrCreate([
+                          'id' => $post->id,
+                      ], [
+                          'views' => DB::raw('views + 1'),
+                      ]);            
                     return view('posts.category', [
-
+                      'post' => $post,
                       'posts'=> Post::withoutGlobalScope('published')->latest()->take(4)->get(),
                    'categories'=> Category::all(),
                    'tags'=>Tag::all(),
-                    'postofcategory'=> $cat, //Category::with(['posts'])->where('id','=',$id)->get(),
+                    'postofcategory'=>Category::with(['posts'])->where('id','=',$id)->get(),
                   //'catid'=>$catid,
                  // 'cat'=>$cat,
                   'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
+                  'title'=>'<h2>Titlle</h2>'
                     ]);
                   }  
                 public function view($id)

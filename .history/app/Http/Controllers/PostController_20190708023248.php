@@ -51,7 +51,7 @@ class PostController extends Controller
                   public function  post_category($id)
                   {
 
-                 //5cat'=>$cat,
+                 'cat'=>$cat,
                  $cat = Category::with(['posts'])->find($id);
             
                     if (!$cat) {

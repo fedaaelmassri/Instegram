@@ -51,8 +51,8 @@ class PostController extends Controller
                   public function  post_category($id)
                   {
 
-                 //5cat'=>$cat,
-                 $cat = Category::with(['posts'])->find($id);
+                 // 'cat'=>$cat,
+                    $cat = Category::with(['posts'])->find($id);
             
                     if (!$cat) {
                       abort(404);
@@ -63,10 +63,11 @@ class PostController extends Controller
                       'posts'=> Post::withoutGlobalScope('published')->latest()->take(4)->get(),
                    'categories'=> Category::all(),
                    'tags'=>Tag::all(),
-                    'postofcategory'=> $cat, //Category::with(['posts'])->where('id','=',$id)->get(),
+                    'postofcategory'=>$cat,
                   //'catid'=>$catid,
                  // 'cat'=>$cat,
                   'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
+                  'title'=>'<h2>Titlle</h2>'
                     ]);
                   }  
                 public function view($id)
