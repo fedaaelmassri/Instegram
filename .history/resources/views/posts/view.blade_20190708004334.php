@@ -41,7 +41,7 @@
 						<div class="p-b-70">
 						@foreach($post->categories as $category)
 
-							<a href="{{ route('post_category', ['id' => $categoryid->id]) }}" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
+							<a href="#" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
 							{{$category->title}}	
 							</a>
 							@endforeach
@@ -169,18 +169,144 @@
 							</div>
 
 							<ul class="p-t-35">
-							@foreach($categories as $key=> $category)
 								<li class="how-bor3 p-rl-4">
-									<a href="{{ route('post_category', ['id' => $categoryid->id]) }}" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										{{$category->title}}
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+										Fashion
 									</a>
 								</li>
-                              @endforeach
-							
+
+								<li class="how-bor3 p-rl-4">
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+										Beauty
+									</a>
+								</li>
+
+								<li class="how-bor3 p-rl-4">
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+										Street Style
+									</a>
+								</li>
+
+								<li class="how-bor3 p-rl-4">
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+										Life Style
+									</a>
+								</li>
+
+								<li class="how-bor3 p-rl-4">
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+										DIY & Crafts
+									</a>
+								</li>
 							</ul>
 						</div>
 
-					
+						<!-- Archive -->
+						<div class="p-b-37">
+							<div class="how2 how2-cl4 flex-s-c">
+								<h3 class="f1-m-2 cl3 tab01-title">
+									Archive
+								</h3>
+							</div>
+
+							<ul class="p-t-32">
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											July 2018
+										</span>
+
+										<span>
+											(9)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											June 2018
+										</span>
+
+										<span>
+											(39)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											May 2018
+										</span>
+
+										<span>
+											(29)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											April  2018
+										</span>
+
+										<span>
+											(35)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											March 2018
+										</span>
+
+										<span>
+											(22)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											February 2018
+										</span>
+
+										<span>
+											(32)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											January 2018
+										</span>
+
+										<span>
+											(21)
+										</span>
+									</a>
+								</li>
+
+								<li class="p-rl-4 p-b-19">
+									<a href="#" class="flex-wr-sb-c f1-s-10 text-uppercase cl2 hov-cl10 trans-03">
+										<span>
+											December 2017
+										</span>
+
+										<span>
+											(26)
+										</span>
+									</a>
+								</li>
+							</ul>
+						</div>
 
 						<!-- Popular Posts -->
 						<div class="p-b-30">

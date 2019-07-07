@@ -90,7 +90,7 @@
 			<div class="wrap-header-mobile">
 				<!-- Logo moblie -->		
 				<div class="logo-mobile">
-					<a href="{{route('home')}}"><img src="{{asset('images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
+					<a href="index.html"><img src="{{asset('images/icons/logo-01.png')}}" alt="IMG-LOGO"></a>
 				</div>
 
 				<!-- Button show menu -->
@@ -169,7 +169,7 @@
 					@foreach (App\Category::all() as  $category)
 
 					<li>
-						<a href="{{ route('post_category', ['id' => $categoryid->id]) }}">{{$category->title}}</a>
+						<a href="category-01.html">{{$category->title}}</a>
 					</li>
                        @endforeach
 					
@@ -180,7 +180,7 @@
 			<div class="wrap-logo container">
 				<!-- Logo desktop -->		
 				<div class="logo">
-					<a href="{{route('home')}}"><img src="{{asset('images/icons/logo-01.png')}}" alt="LOGO"></a>
+					<a href="index.html"><img src="{{asset('images/icons/logo-01.png')}}" alt="LOGO"></a>
 				</div>	
 
 				<!-- Banner -->
@@ -194,7 +194,7 @@
 				<div class="main-nav">
 					<!-- Menu desktop -->
 					<nav class="menu-desktop">
-						<a class="logo-stick" href="{{route('home')}}">
+						<a class="logo-stick" href="index.html">
 							<img src="{{asset('images/icons/logo-01.png')}}" alt="LOGO">
 						</a>
                          
@@ -208,7 +208,7 @@
 						@foreach (App\Category::all() as  $category)
 
 							<li>
-						<a href="{{ route('post_category', ['id' => $categoryid->id]) }}">{{$category->title}}</a>
+						<a href="category-01.html">{{$category->title}}</a>
 							</li>
 						@endforeach
 				
@@ -275,7 +275,7 @@
 				<div class="row">
 					<div class="col-lg-4 p-b-20">
 						<div class="size-h-3 flex-s-c">
-							<a href="{{route('home')}}">
+							<a href="index.html">
 								<img class="max-s-full" src="{{asset('images/icons/logo-02.png')}}" alt="LOGO">
 							</a>
 						</div>

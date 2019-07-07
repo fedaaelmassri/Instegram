@@ -422,6 +422,7 @@
 				</div>
 
 @endsection
+@endsection                       
  @section('tags')
  <div class="p-b-55">
 							<div class="how2 how2-cl4 flex-s-c m-b-30">
@@ -441,28 +442,7 @@
 					    </div>	
 						</div>
 @endsection
-@section('category')
-	<!-- Category -->
-	<div class="p-b-60">
-							<div class="how2 how2-cl4 flex-s-c">
-								<h3 class="f1-m-2 cl3 tab01-title">
-									Category
-								</h3>
-							</div>
 
-							<ul class="p-t-35">
-							@foreach($categories as $key=> $category)
-								<li class="how-bor3 p-rl-4">
-									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
-										{{$category->title}}
-									</a>
-								</li>
-                              @endforeach
-							
-							</ul>
-						</div>
-
-@endsection
 
 @section('mostpopular')
 

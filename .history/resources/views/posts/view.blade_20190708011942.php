@@ -41,7 +41,7 @@
 						<div class="p-b-70">
 						@foreach($post->categories as $category)
 
-							<a href="{{ route('post_category', ['id' => $categoryid->id]) }}" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
+							<a href="#" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
 							{{$category->title}}	
 							</a>
 							@endforeach

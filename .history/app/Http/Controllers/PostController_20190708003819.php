@@ -68,8 +68,8 @@ class PostController extends Controller
                  'categories'=> Category::all(),
                  'tags'=>Tag::all(),
                   'postofcategory'=>Category::with(['posts'])->where('id','=',$id)->get(),
-                //'catid'=>$catid,
-               // 'cat'=>$cat,
+                'catid'=>$catid,
+                'cat'=>$cat,
                 'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
                 'title'=>'<h2>Titlle</h2>'
                   ]);

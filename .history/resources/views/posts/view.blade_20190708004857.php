@@ -41,7 +41,7 @@
 						<div class="p-b-70">
 						@foreach($post->categories as $category)
 
-							<a href="{{ route('post_category', ['id' => $categoryid->id]) }}" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
+							<a href="#" class="f1-s-10 cl2 hov-cl10 trans-03 text-uppercase">
 							{{$category->title}}	
 							</a>
 							@endforeach
@@ -171,7 +171,7 @@
 							<ul class="p-t-35">
 							@foreach($categories as $key=> $category)
 								<li class="how-bor3 p-rl-4">
-									<a href="{{ route('post_category', ['id' => $categoryid->id]) }}" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
+									<a href="#" class="dis-block f1-s-10 text-uppercase cl2 hov-cl10 trans-03 p-tb-13">
 										{{$category->title}}
 									</a>
 								</li>

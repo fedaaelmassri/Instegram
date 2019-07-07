@@ -169,7 +169,7 @@
 					@foreach (App\Category::all() as  $category)
 
 					<li>
-						<a href="{{ route('post_category', ['id' => $categoryid->id]) }}">{{$category->title}}</a>
+						<a href="category-01.html">{{$category->title}}</a>
 					</li>
                        @endforeach
 					
@@ -208,7 +208,7 @@
 						@foreach (App\Category::all() as  $category)
 
 							<li>
-						<a href="{{ route('post_category', ['id' => $categoryid->id]) }}">{{$category->title}}</a>
+						<a href="category-01.html">{{$category->title}}</a>
 							</li>
 						@endforeach
 				
