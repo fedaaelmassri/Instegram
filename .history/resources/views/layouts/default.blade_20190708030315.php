@@ -322,7 +322,7 @@
 
 						<ul>
 						@foreach($mostpopular as $key=> $post)
-                            @if($key < 3)
+                            @if($key < 4)
 
 							<li class="flex-wr-sb-s p-b-20">
 								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">

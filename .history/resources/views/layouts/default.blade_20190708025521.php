@@ -321,30 +321,59 @@
 						</div>
 
 						<ul>
-						@foreach($mostpopular as $key=> $post)
-                            @if($key < 3)
-
 							<li class="flex-wr-sb-s p-b-20">
 								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
-									<img src="{{ asset('storage/'.$post->image) }}" alt="IMG">
+									<img src="images/popular-post-01.jpg" alt="IMG">
 								</a>
 
 								<div class="size-w-5">
 									<h6 class="p-b-5">
-										<a href="{{ route('view', ['id' => $post->id]) }}" class="f1-s-5 cl11 hov-cl10 trans-03">
-										{{$post->title}}
- 										</a>
+										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+											Donec metus orci, malesuada et lectus vitae
+										</a>
 									</h6>
 
 									<span class="f1-s-3 cl6">
-									{{$post->created_at}}
+										Feb 17
 									</span>
 								</div>
 							</li>
-							@endif
-                         @endforeach
-						
-						
+
+							<li class="flex-wr-sb-s p-b-20">
+								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
+									<img src="images/popular-post-02.jpg" alt="IMG">
+								</a>
+
+								<div class="size-w-5">
+									<h6 class="p-b-5">
+										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+											Lorem ipsum dolor sit amet, consectetur
+										</a>
+									</h6>
+
+									<span class="f1-s-3 cl6">
+										Feb 16
+									</span>
+								</div>
+							</li>
+
+							<li class="flex-wr-sb-s p-b-20">
+								<a href="#" class="size-w-4 wrap-pic-w hov1 trans-03">
+									<img src="images/popular-post-03.jpg" alt="IMG">
+								</a>
+
+								<div class="size-w-5">
+									<h6 class="p-b-5">
+										<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03">
+											Suspendisse dictum enim quis imperdiet auctor
+										</a>
+									</h6>
+
+									<span class="f1-s-3 cl6">
+										Feb 15
+									</span>
+								</div>
+							</li>
 						</ul>
 					</div>
 
@@ -357,15 +386,38 @@
                        
 						<ul class="m-t--12">
 							
+						$wordCount = count($wordlist);
 
 						@foreach (App\Category::all() as  $category)
 
-<li class="how-bor1 p-rl-5 p-tb-10">
-<a href="{{ route('post_category', ['id' => $category->id]) }}" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">{{$category->title}} ({{$postcount}}) </a>
+<li>
+<a href="{{ route('post_category', ['id' => $category->id]) }}">{{$category->title}} ({{$postcount}}) </a>
 </li>
 @endforeach
 
-							
+							<li class="how-bor1 p-rl-5 p-tb-10">
+								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+									Technology (29)
+								</a>
+							</li>
+
+							<li class="how-bor1 p-rl-5 p-tb-10">
+								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+									Street Style (15)
+								</a>
+							</li>
+
+							<li class="how-bor1 p-rl-5 p-tb-10">
+								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+									Life Style (28)
+								</a>
+							</li>
+
+							<li class="how-bor1 p-rl-5 p-tb-10">
+								<a href="#" class="f1-s-5 cl11 hov-cl10 trans-03 p-tb-8">
+									DIY & Crafts (16)
+								</a>
+							</li>
 						</ul>
 					</div>
 				</div>
