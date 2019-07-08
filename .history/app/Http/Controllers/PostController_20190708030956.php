@@ -35,7 +35,6 @@ class PostController extends Controller
                   'postofcategory'=>Category::with(['posts'])->where('id','=',$id)->get(),
                 'catid'=>$catid,
                 'cat'=>$cat,
-                'postcount'=>$postcount,
                 'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
                 'title'=>'<h2>Titlle</h2>'
                     ]);
@@ -53,8 +52,6 @@ class PostController extends Controller
                 // }
                   public function  post_category($id)
                   {
-                    $catcount = Category::with(['posts']);
-                    $postcount=$catcount->count();
                  //5cat'=>$cat,
                  $cat = Category::with(['posts'])->find($id);
                   //$postcount=$cat->count();
@@ -63,21 +60,19 @@ class PostController extends Controller
                     }
                       
                     return view('posts.category', [
-                        
+
                       'posts'=> Post::withoutGlobalScope('published')->latest()->take(4)->get(),
                    'categories'=> Category::all(),
                    'tags'=>Tag::all(),
                     'postofcategory'=> $cat, //Category::with(['posts'])->where('id','=',$id)->get(),
-                  'postcount'=>$postcount,
+                 // 'postcount'=>$postcount,
                  // 'cat'=>$cat,
                   'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
                     ]);
                   }  
                 public function view($id)
                 {
-                  $catcount = Category::with(['posts']);
-                  $postcount=$catcount->count();
-
+                    
                     $post = Post::published()->find($id);
             
                   if (!$post) {
@@ -95,7 +90,7 @@ class PostController extends Controller
                  'categories'=> Category::all(),
                  'tags'=>Tag::all(),
                   'postofcategory'=>Category::with(['posts'])->where('id','=',$id)->get(),
-                'postcount'=>$postcount,
+                //'catid'=>$catid,
                // 'cat'=>$cat,
                 'mostpopular'=>Post::withoutGlobalScope('published')->orderBy('views', 'desc')->latest()->take(5)->get(),
                 'title'=>'<h2>Titlle</h2>'
