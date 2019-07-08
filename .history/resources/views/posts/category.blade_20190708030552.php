@@ -13,8 +13,8 @@
 					Home 
 				</a>
 
-				<a href="#" class="breadcrumb-item f1-s-3 cl9">
-					Categories 
+				<a href="blog-list-01.html" class="breadcrumb-item f1-s-3 cl9">
+					Category 
 				</a>
 
 				<span class="breadcrumb-item f1-s-3 cl9">
